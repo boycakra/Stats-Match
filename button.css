@@ -1,0 +1,954 @@
+
+/* Mid Lane Block Mark Circle */
+.Pg-Block-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, blue 40%, transparent 40%);
+    border: 2px solid orange;
+    pointer-events: none; 
+}
+
+.Pg-Block-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: blue; /* Add a mark similar to Fouls */
+}
+
+/* Gold Lane Block Mark Circle */
+.Sg-Block-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, rgb(100, 150, 200) 40%, transparent 40%);
+    border: 2px solid purple;
+    pointer-events: none; 
+}
+
+.Sg-Block-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Add a mark similar to Fouls */
+}
+
+/* Exp Lane Block Mark Circle */
+.Sf-Block-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, green 40%, transparent 40%);
+    border: 2px solid yellow;
+    pointer-events: none; 
+}
+
+.Sf-Block-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Add a mark similar to Fouls */
+}
+
+/* Roamer Lane Block Mark Circle */
+.Pf-Block-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, pink 40%, transparent 40%);
+    border: 2px solid red;
+    pointer-events: none; 
+}
+
+.Pf-Block-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Add a mark similar to Fouls */
+}
+
+/* Jungle Lane Block Mark Circle */
+.jungle-lane-Block-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, green 40%, transparent 40%);
+    border: 2px solid green;
+    pointer-events: none; 
+}
+
+.jungle-lane-Block-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Add a mark similar to Fouls */
+}
+
+
+
+
+
+/* Mark circle - sebagai penanda user ngeklik  */
+.lead-uppercut-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    pointer-events: none; 
+}
+
+.Pg-Fail-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, red 40%, transparent 40%);
+    border: 2px solid red;
+    pointer-events: none; 
+}
+.Pg-assisted-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                 /* Makes it a circle */
+    border: 2px solid red;        /* Border around the circle */
+    position: relative;                 /* Enables absolute positioning of inner elements */
+    background-color: transparent;      /* Making the background transparent, so only the border is visible */
+    pointer-events: none; 
+}
+
+/* Vertical line of the Sfhair */
+.Pg-assisted-mark-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: red;
+    transform: translateX(-50%);        /* Centering the line */
+}
+
+/* Horizontal line of the Sfhair */
+.Pg-assisted-mark-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: red;
+    transform: translateY(-50%);        /* Centering the line */
+}
+/* For Steals-mark-circle */
+.PgSteals-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, red 40%, transparent 40%);
+    border: 2px solid red;
+    pointer-events: none; 
+}
+
+.PgSteals-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Fouls-mark-circle */
+.PgFouls-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, red 40%, transparent 40%);
+    border: 2px solid yellow;
+    pointer-events: none; 
+}
+
+.PgFouls-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Free Throw-mark-square */
+.PgFree Throw-mark-square {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: blue;
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.PgFree Throw-mark-square::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+}
+
+
+/* For Shoot-3p-mark-circle */
+.Pg-Shoot-3p-mark-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid red;
+    pointer-events: none; 
+}
+
+.Pg-Shoot-3p-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid red;
+}
+
+.rear-uppercut-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(155, 120, 107);
+    position: absolute;
+    pointer-events: none; 
+}
+.Sg-Fail-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, rgb(155, 120, 107) 40%, transparent 40%);
+    border: 2px solid rgb(155, 120, 107);
+    pointer-events: none; 
+}
+.Sg-assisted-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                 /* Makes it a circle */
+    border: 2px solid rgb(155, 120, 107);        /* Border around the circle */
+    position: relative;                 /* Enables absolute positioning of inner elements */
+    background-color: transparent;      /* Making the background transparent, so only the border is visible */
+    pointer-events: none; 
+}
+
+/* Vertical line of the Sfhair */
+.Sg-assisted-mark-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(155, 120, 107);
+    transform: translateX(-50%);        /* Centering the line */
+}
+
+/* Horizontal line of the Sfhair */
+.Sg-assisted-mark-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(155, 120, 107);
+    transform: translateY(-50%);        /* Centering the line */
+}
+
+
+/* For Steals-mark-circle */
+.SgSteals-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  rgb(155, 120, 107) 40%, transparent 40%);
+    border: 2px solid  rgb(155, 120, 107);
+    pointer-events: none; 
+}
+
+.SgSteals-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Fouls-mark-circle */
+.SgFouls-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  rgb(155, 120, 107) 40%, transparent 40%);
+    border: 2px solid  yellow;
+    pointer-events: none; 
+}
+
+.SgFouls-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Free Throw-mark-square */
+.SgFree Throw-mark-square {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: blue;
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.SgFree Throw-mark-square::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+}
+
+
+/* For Shoot-3p-mark-circle */
+.Sg-Shoot-3p-mark-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid  rgb(155, 120, 107);
+    pointer-events: none; 
+}
+
+.Sg-Shoot-3p-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid  rgb(155, 120, 107);
+}
+
+
+.Inisiasi-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: blue; /* Set the background color to blue */
+    position: absolute;
+    pointer-events: none; 
+}
+
+.Inisiasi-Fail-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, blue 40%, transparent 40%);
+    border: 2px solid blue;
+    pointer-events: none; 
+}
+.Inisiasi-assisted-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                 /* Makes it a circle */
+    border: 2px solid blue;        /* Border around the circle */
+    position: relative;                 /* Enables absolute positioning of inner elements */
+    background-color: transparent;      /* Making the background transparent, so only the border is visible */
+    pointer-events: none; 
+}
+
+/* Vertical line of the Sfhair */
+.Inisiasi-assisted-mark-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color:blue;
+    transform: translateX(-50%);        /* Centering the line */
+}
+
+/* Horizontal line of the Sfhair */
+.Inisiasi-assisted-mark-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: blue;
+    transform: translateY(-50%);        /* Centering the line */
+}
+
+/* For Steals-mark-circle */
+.InisiasiSteals-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  blue 40%, transparent 40%);
+    border: 2px solid  blue;
+    pointer-events: none; 
+}
+
+.InisiasiSteals-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Shoot-3p-mark-circle */
+.Inisiasi-Shoot-3p-mark-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid  blue;
+    pointer-events: none; 
+}
+
+.Inisiasi-Shoot-3p-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid  blue;
+}
+
+
+
+.croos-mark-innercircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    pointer-events: none; 
+}
+
+.Sf-Fail-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, yellow 40%, transparent 40%);
+    border: 2px solid yellow;
+    pointer-events: none; 
+}
+.Sf-assisted-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                 /* Makes it a circle */
+    border: 2px solid yellow;        /* Border around the circle */
+    position: relative;                 /* Enables absolute positioning of inner elements */
+    background-color: transparent;      /* Making the background transparent, so only the border is visible */
+    pointer-events: none; 
+}
+
+/* Vertical line of the Sfhair */
+.Sf-assisted-mark-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color:yellow;
+    transform: translateX(-50%);        /* Centering the line */
+}
+
+/* Horizontal line of the Sfhair */
+.Sf-assisted-mark-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: yellow;
+    transform: translateY(-50%);        /* Centering the line */
+}
+
+
+
+/* For Steals-mark-circle */
+.SfSteals-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  yellow 40%, transparent 40%);
+    border: 2px solid  yellow;
+    pointer-events: none; 
+}
+
+.SfSteals-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Steals-mark-circle */
+.SfFouls-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  yellow 40%, transparent 40%);
+    border: 2px solid  yellow;
+    pointer-events: none; 
+}
+
+.SfFouls-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+.SfFree Throw-mark-square {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: blue;
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.SfFree Throw-mark-square::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+}
+
+
+/* For Shoot-3p-mark-circle */
+.Sf-Shoot-3p-mark-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid  yellow;
+    pointer-events: none; 
+}
+
+.Sf-Shoot-3p-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid  yellow;
+}
+
+
+
+.Pf-mark-innercircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: green;
+    position: absolute;
+    pointer-events: none; 
+}
+
+.Pf-Fail-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, green 40%, transparent 40%);
+    border: 2px solid green;
+    pointer-events: none; 
+}
+.Pf-assisted-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                 /* Makes it a circle */
+    border: 2px solid green;        /* Border around the circle */
+    position: relative;                 /* Enables absolute positioning of inner elements */
+    background-color: transparent;      /* Making the background transparent, so only the border is visible */
+    pointer-events: none; 
+}
+
+/* Vertical line of the Sfhair */
+.Pf-assisted-mark-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color:green;
+    transform: translateX(-50%);        /* Centering the line */
+}
+
+/* Horizontal line of the Sfhair */
+.Pf-assisted-mark-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: green;
+    transform: translateY(-50%);        /* Centering the line */
+}
+
+
+/* For Steals-mark-circle */
+.PfSteals-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  green 40%, transparent 40%);
+    border: 2px solid  green;
+    pointer-events: none; 
+}
+
+.PfSteals-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+/* For Steals-mark-circle */
+.PfFouls-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  green 40%, transparent 40%);
+    border: 2px solid  yellow;
+    pointer-events: none; 
+}
+
+.PfFouls-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+.PfFree Throw-mark-square {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: blue;
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.PfFree Throw-mark-square::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+}
+
+/* For Shoot-3p-mark-circle */
+.Pf-Shoot-3p-mark-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid  green;
+    pointer-events: none; 
+}
+
+.Pf-Shoot-3p-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid  green;
+}
+
+
+
+.Center-mark-innercircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: greenyellow;
+    position: absolute;
+    pointer-events: none; 
+}
+
+.Center-Fail-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, greenyellow 40%, transparent 40%);
+    border: 2px solid greenyellow;
+    pointer-events: none; 
+}
+.Center-assisted-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                 /* Makes it a circle */
+    border: 2px solid greenyellow;        /* Border around the circle */
+    position: relative;                 /* Enables absolute positioning of inner elements */
+    background-color: transparent;      /* Making the background transparent, so only the border is visible */
+    pointer-events: none; 
+}
+
+/* Vertical line of the Sfhair */
+.Center-assisted-mark-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color:greenyellow;
+    transform: translateX(-50%);        /* Centering the line */
+}
+
+/* Horizontal line of the Sfhair */
+.Center-assisted-mark-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: greenyellow;
+    transform: translateY(-50%);        /* Centering the line */
+}
+
+
+
+/* For Steals-mark-circle */
+.CenterSteals-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  greenyellow 40%, transparent 40%);
+    border: 2px solid  greenyellow;
+    pointer-events: none; 
+}
+
+.CenterSteals-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+/* For Steals-mark-circle */
+.CenterFouls-mark-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle,  greenyellow 40%, transparent 40%);
+    border: 2px solid  yellow;
+    pointer-events: none; 
+}
+
+.CenterFouls-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+.CenterFree Throw-mark-square {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: blue;
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.CenterFree Throw-mark-square::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+}
+
+/* For Shoot-3p-mark-circle */
+.Center-Shoot-3p-mark-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid  greenyellow;
+    pointer-events: none; 
+}
+
+.Center-Shoot-3p-mark-circle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid  greenyellow;
+}
+
+
+
+.default-mark-innercircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: gray;
+    position: absolute;
+}
+.InisiasiFree Throw-mark-square {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: blue;
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.InisiasiFree Throw-mark-square::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+}

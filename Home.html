@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="button.css"> <!-- Adjust the path accordingly -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Hom.css">
+    <title>Your Title</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bola Basket</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('uploads') }}">Uploads</a>
+            </li>
+      
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>  
+                </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('register') }}">Sign up</a>  
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <div class = "container">
+      
+
+    <!-- New timer-container div -->
+    <div id="image-container">
+        <div class="image-wrapper">
+            <img id="image1" src="images/lapangan.jpg" alt="body" />
+        </div>
+
+        
+
+        <div class="image-wrapper">
+            <img id="image2" src="images/lapangan.jpg" alt="body2" />
+        </div>
+    </div>
+    <div class="dropdownLeft" style="float: left; margin-right: 100px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="leftDropdownMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Left Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="leftDropdownMenu">
+            <label for="input1">Input 1:</label>
+            <input type="text" id="InputATeam1" name="input1">
+            <label for="input2">Input 2:</label>
+            <input type="text" id="InputATeam2" name="input2">
+            <!-- Left dropdown content here -->
+        </div>
+    </div>
+
+    <div class="dropdownRight" style="float: right; margin-left: 20px;"> <!-- Adjusted margin-left -->
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="rightDropdownMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Right Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="rightDropdownMenu">
+            <!-- Right dropdown content here -->
+            <label for="input1">Input 1:</label>
+            <input type="text" id="InputBTeam1" name="input1">
+            <label for="input2">Input 2:</label>
+            <input type="text" id="InputBTeam2" name="input2">
+        </div>
+    </div>
+
+
+    
+
+    <div id="container">
+        <div id="stats">
+            <!-- Lokasi table player sebelah kiri -->
+            <div id="stats1">
+                <h3>Status blue team</h3>
+                <div class="table-container">
+                    <table id="player1-table">
+                        <thead>
+                            <tr>
+                                <th>Mark Coordinate</th>
+                                <th>Value</th>
+                                <th>Player</th>
+                                <th>Timer</th> <!-- Add a new column for the timer -->
+                            </tr>
+                        </thead>
+                        <tbody id="mark-table-body">
+                            <!-- Table rows will be inserted dynamically using JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Lokasi table player sebelah kanan -->
+            <div id="stats2">
+                <h3>Status Red team </h3>
+                <div class="table-container">
+                    <table id="player2-table">
+                        <thead>
+                            <tr>
+                                <th>Mark Coordinate</th>
+                                <th>Value</th>
+                                <th>Player</th>
+                                <th>Timer</th> <!-- Add a new column for the timer -->
+                            </tr>
+                        </thead>
+                        <tbody id="mark-table-body-2"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="confirm">
+            <button id="Shoot-2p">Shoot-2p</button>
+            <button id="assisted">assisted</button>
+            <button id="Shoot-3p">Shoot-3p</button>
+            <button id="Steals">Steals</button>
+            <button id="Fouls">Fouls</button>
+        </div>
+        <button id="Free Throw">Free Throw</button>
+        <button id="Block">Block</button>
+        <!-- Footer | Text dan tombol bagian bawah pada masing-masing gambar -->
+        <div id="footer">
+            <div id="stats1-now">
+                <p>Ini yang kiri</p>
+                <button id="undo-player1">Undo</button>
+                <button id="Pg">Pg</button>
+                <button id="Sg">Sg</button>
+                <button id="Sf">Sf</button>
+                <button id="Pf">Pf</button>
+                <button id="Center">Center</button>
+                <button id="Inisiasi">Inisiasi</button> <!-- New Inisiasi button -->
+                <div id="coordinate-display"></div>
+                <div id="value-display"></div>
+                <button id="export-player1">Export Player 1</button>
+            </div>
+            <div id="stats2-now">
+                <p>Ini yang kanan</p>
+                <button id="undo-player2">Undo</button>
+                <button id="Pgplayer2">Pg</button>
+                <button id="Sgp2">Sg</button>
+                <button id="Sfp2">Sf</button>
+                <button id="Pfp2">Pf</button> <!-- New InisiasiPlayer2 button -->
+                <button id="Centerp2">Center</button>
+                <button id="Inisiasiplayer2">Inisiasi</button> <!-- New InisiasiPlayer2 button -->
+                <div id="coordinate-display_player2"></div>
+                <div id="value-display_player2"></div>
+                <button id="export-player2">Export Player 2</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="full">
+        <!-- Lokasi table player sebelah kiri -->
+        <div id="stats-all">
+            <h3>Status match</h3>
+            <div class="match-container">
+                <table id="match-table">
+                    <thead>
+                        <tr>
+                            <th>Coordinates</th>
+                            <th>Value</th>
+                            <th>Player</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="match-table-body"></tbody>
+                </table>
+            </div>
+            <button id="export-Match">Export Match </button>
+        </div>
+    </div>
+  
+    <script src="script.js" defer></script> <!-- Adjust the path accordingly -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
